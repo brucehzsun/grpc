@@ -35,6 +35,6 @@ elseif(gRPC_ABSL_PROVIDER STREQUAL "module")
   endif()
 elseif(gRPC_ABSL_PROVIDER STREQUAL "package")
   # Use "CONFIG" as there is no built-in cmake module for absl.
-  find_package(absl REQUIRED CONFIG)
+  find_package(absl 20230125 REQUIRED CONFIG)
 endif()
 set(_gRPC_FIND_ABSL "if(NOT TARGET absl::strings)\n  find_package(absl CONFIG)\nendif()")
